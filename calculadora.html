@@ -95,20 +95,34 @@
 		</div>
 
 		<div id="btns" class="btns">
-			<button id="suma">Sumar</button>
+			<button id="suma" onclick="sumar()">Sumar</button>
 			<button id="resta">Restar</button>
 			<button id="multiplica">Multiplicar</button>
 			<button id="divide">Dividir</button>
 			<button id="exponente">Exponente</button>
 			<button id="raiz">Raiz</button>
-
-
 		</div>
 			
 		<div class="result">
 			<p id="resultado">-</p>
 		</div>	
 	</div>
+
+	<script>
+		function sumar(){
+			
+			var num1 = document.getElementById("numero1").value;
+			var num2 = document.getElementById("numero2").value;
+			// alert("suma: " + num1 + num2);
+
+			var resultado = parseInt(num1) + parseInt(num2);
+			// alert("Resultado: " + resultado);
+
+			var mostrar = document.getElementById("resultado");
+			mostrar.innerHTML = resultado;
+			
+		}
+	</script>
 
 </body>
 </html>
